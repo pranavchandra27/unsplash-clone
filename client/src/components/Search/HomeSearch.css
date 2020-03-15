@@ -1,0 +1,52 @@
+.HomeSearch {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  line-height: 1;
+}
+
+.HomeSearch::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.HomeSearch-form,
+.HomeSearch-headings {
+  z-index: 1;
+  position: relative;
+  max-width: 750px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.HomeSearch-form input {
+  padding: 0 16px 0 50px;
+  height: 50px;
+  font-size: 16px;
+}
+
+.HomeSearch-form button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.HomeSearch-headings p {
+  font-weight: 400;
+  font-size: 20px;
+}

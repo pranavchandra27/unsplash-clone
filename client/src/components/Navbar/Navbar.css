@@ -1,0 +1,20 @@
+.Navbar {
+  width: 95%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.Nav-Search {
+  max-width: 700px;
+  width: 60%;
+}
+
+.Navbar .More-Options {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .Navbar .More-Options {
+    display: block;
+  }
+}

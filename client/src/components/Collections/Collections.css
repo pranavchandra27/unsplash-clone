@@ -1,0 +1,49 @@
+.Collections {
+  overflow: hidden;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.Collections-Grid {
+  margin: 20px auto;
+}
+
+.Collections-Heading {
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+
+.Collections-Heading .Title {
+  letter-spacing: 0.4px;
+  margin-top: 4rem;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.Collections-Heading p {
+  max-width: 600px;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.Collections-Heading a {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.Collections-Heading a:hover {
+  color: #333;
+}
+
+@media screen and (max-width: 1280px) {
+  .Collections-Heading {
+    margin-left: 2rem;
+  }
+}

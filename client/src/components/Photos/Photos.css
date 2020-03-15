@@ -1,0 +1,10 @@
+.Photos {
+  overflow: hidden;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.Photos-Grid {
+  margin: 20px auto;
+  overflow: hidden;
+}

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  font-size: 14px;
+}
+
+.small-display img {
+  width: 50px;
+}
+
+.small-display p {
+  font-size: 18px;
+  color: #000;
+}
+
+.small-display i {
+  font-size: 22px;
+}
+
+.small-display {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .small-display {
+    display: block;
+  }
+}

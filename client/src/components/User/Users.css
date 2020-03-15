@@ -1,0 +1,16 @@
+.User-Info {
+  max-width: 650px;
+  width: 90%;
+  margin: auto;
+}
+
+.User-Info .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+
+.User-Data {
+  padding-bottom: 5rem;
+}

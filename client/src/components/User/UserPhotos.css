@@ -1,0 +1,9 @@
+.User-Photos {
+  overflow: hidden;
+  max-width: 1280px;
+  margin: 20px auto;
+}
+
+.UserPhotos-Grid {
+  overflow: hidden;
+}

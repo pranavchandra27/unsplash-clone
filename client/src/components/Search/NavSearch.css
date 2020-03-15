@@ -1,0 +1,46 @@
+.NavSearch {
+  width: 100%;
+}
+
+.NavSearch-Form {
+  width: 100%;
+  position: relative;
+  height: 40px;
+}
+
+.NavSearch-Input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 40px;
+  text-transform: lowercase;
+  transition: background 0.3s ease;
+}
+
+.NavSearch-Input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 39px;
+}
+
+.NavSearch-Input:focus {
+  background: #fff;
+  border: 1px solid #aaa;
+  padding: 0 39px;
+}
+
+.NavSearch-Button {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0);
+  color: #888;
+}
