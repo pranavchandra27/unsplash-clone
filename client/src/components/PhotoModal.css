@@ -60,7 +60,7 @@
 
 .PhotoModal-Collection .Cover-Photo {
   width: 70%;
-  height: 280px;
+  height: 300px;
 }
 
 .PhotoModal-Collection .Cover-Photo img {
@@ -77,7 +77,7 @@
 
 .PhotoModal-Collection .Preview-Photo img {
   border-radius: 5px;
-  height: 140px;
+  height: 150px;
   width: 100%;
   object-fit: cover;
 }
@@ -96,6 +96,10 @@
   cursor: pointer;
 }
 
+.PhotoModal .PhotoModal-Download-Btn {
+  display: none;
+}
+
 @media screen and (max-width: 1100px) {
   .PhotoModal .PhotoModal-Collection .Card {
     width: 48%;
@@ -106,7 +110,32 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
+  .PhotoModal .modal-90w {
+    max-width: 95vw;
+    width: 95vw;
+    padding: 0 !important;
+  }
+
+  .PhotoModal .PhotoModal-Download-Btn {
+    display: block;
+  }
+
+  .PhotoModal .PhotoModal-Download {
+    display: none;
+  }
+
+  .PhotoModal .Related-Collections {
+    padding-left: 10px !important;
+  }
+
+  .PhotoModal .Related-Collections h2 {
+    font-size: 25px;
+  }
+
+  .PhotoModal .PhotoModal-Collection {
+    padding: 10px !important;
+  }
   .PhotoModal .PhotoModal-Collection .Card {
     width: 100%;
     margin: 0;

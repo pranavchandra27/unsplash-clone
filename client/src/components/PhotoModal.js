@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import "./PhotoModal.css";
 
@@ -53,31 +54,45 @@ class PhotoModal extends Component {
               <div className="Image">
                 <a href={photoData.user.links.html} className="d-flex">
                   <img
-                    src={photoData.user.profile_image.small}
+                    src={photoData.user.profile_image.large}
                     alt={photoData.user.name}
                   />
-                  <div className="pl-2 text-dark Name">
-                    <p className="m-0">{photoData.user.name}</p>
-                    <p className="text-secondary">@{photoData.user.username}</p>
-                  </div>
+                  <Link
+                    className="pl-2 py-0 text-dark Name"
+                    to={`/user/${photoData.user.username}`}
+                  >
+                    <p className="m-0 p-0">{photoData.user.name}</p>
+                    <p className="text-secondary m-0 p-0">
+                      @{photoData.user.username}
+                    </p>
+                  </Link>
                 </a>
               </div>
-              <div>
+              <div className="d-flex">
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
                   href={photoData.urls.raw}
                   download={photoData.urls.raw}
-                  className="btn btn-success text-white"
+                  className="btn btn-sm btn-dark PhotoModal-Download text-white"
                 >
                   Download Full Photo
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={photoData.urls.raw}
+                  download={photoData.urls.raw}
+                  className="btn btn-sm btn-dark PhotoModal-Download-Btn text-white"
+                >
+                  <i className="fas fa-download"></i>
                 </a>
                 <button
                   onClick={() => {
                     history.goBack();
                     this.setState({ isShow: false });
                   }}
-                  className="btn btn-danger ml-2"
+                  className="btn btn-sm btn-small btn-secondary ml-2"
                 >
                   <i className="fas fa-times"></i>
                 </button>
@@ -93,7 +108,11 @@ class PhotoModal extends Component {
             >
               {isImageBig ? (
                 <img
-                  style={{ height: "150vh", width: "100%", objectFit: "cover" }}
+                  style={{
+                    height: "150vh",
+                    width: "100%",
+                    objectFit: "center"
+                  }}
                   src={photoData.urls.raw}
                   alt={photoData.alt_description}
                 />
@@ -105,7 +124,7 @@ class PhotoModal extends Component {
                 />
               )}
             </div>
-            <div className="pl-5 pt-5">
+            <div className="pl-5 Related-Collections pt-5">
               <h2 className="h1">Related collections</h2>
             </div>
             <div className="p-5 d-flex flex-wrap PhotoModal-Collection">
@@ -144,7 +163,7 @@ class PhotoModal extends Component {
                     >
                       {res.title}
                     </h5>
-                    <p className="text-secondary">
+                    <p className="text-secondary text-nowrap text-truncate">
                       {res.total_photos} photos - Curated by {res.user.name}
                     </p>
                   </div>
