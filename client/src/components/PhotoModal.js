@@ -51,7 +51,7 @@ class PhotoModal extends Component {
         >
           <Modal.Body className="p-0">
             <div className="d-flex justify-content-between align-items-center pt-3 px-3 Header">
-              <div className="Image">
+              <div className="Image align-items-center">
                 <a href={photoData.user.links.html} className="d-flex">
                   <img
                     src={photoData.user.profile_image.large}
