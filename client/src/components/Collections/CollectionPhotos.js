@@ -14,7 +14,8 @@ export class CollectionPhotos extends Component {
     description: "",
     author: "",
     total_photos: "",
-    profile: ""
+    profile: "",
+    username: ""
   };
 
   componentDidMount() {
@@ -36,7 +37,8 @@ export class CollectionPhotos extends Component {
           description: res.data.description,
           author: res.data.user.name,
           total_photos: res.data.total_photos,
-          profile: res.data.user.profile_image.small
+          profile: res.data.user.profile_image.small,
+          username: res.data.user.username
         });
       });
   };
@@ -59,7 +61,8 @@ export class CollectionPhotos extends Component {
       description,
       author,
       total_photos,
-      profile
+      profile,
+      username
     } = this.state;
     return !title ? (
       ""
@@ -70,11 +73,13 @@ export class CollectionPhotos extends Component {
             {title}
           </h1>
           <p className="CollectionPhotos-Desc">{description}</p>
-          <p className="mt-4">
-            <img className="mr-2 rounded-circle" src={profile} alt={author} />
-            {author}
+          <p className="mt-3 CollectionPhotos-Author text-dark">
+            <Link to={`/user/${username}`}>
+              <img className="mr-2 rounded-circle" src={profile} alt={author} />
+              {author}
+            </Link>
           </p>
-          <p className="CollectionPhotos-Author text-secondary mt-5">
+          <p className="CollectionPhotos-PhotoCount text-secondary mt-2">
             {total_photos} photos
           </p>
         </div>
@@ -97,7 +102,47 @@ export class CollectionPhotos extends Component {
                   onClick={() => history.push(`/photos/${photo.id}`)}
                   className="Photo-Layer"
                 ></div>
-                <img srcSet={photo.urls.small} alt={photo.alt_description} />
+                <div className="small-display px-2">
+                  <div className="pb-2">
+                    <div className="d-flex align-items-center">
+                      <Link to={`/user/${photo.user.username}`}>
+                        <img
+                          className="rounded-circle"
+                          src={photo.user.profile_image.large}
+                          alt={photo.user.name}
+                        />
+                      </Link>
+                      <Link to={`/user/${photo.user.username}`}>
+                        <p className="pl-2 m-0">{photo.user.name}</p>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ background: photo.color }}>
+                  <img src={photo.urls.small} alt={photo.alt_description} />
+                </div>
+                <div className="small-display px-2">
+                  <div className="pt-2 d-flex justify-content-between">
+                    <div className="d-flex">
+                      <p className="m-0">
+                        <i className="far fa-heart"></i>
+                      </p>
+                      <p className="m-0 pl-3">
+                        <i className="far fa-plus-square"></i>
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href={photo.links.download}
+                        className="text-dark"
+                      >
+                        <i className="fas fa-download"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
                 <div className="Collection-Photo-Info">
                   <div className="Top-Icon">
                     <p>

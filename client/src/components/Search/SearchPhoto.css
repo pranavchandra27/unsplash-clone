@@ -123,7 +123,7 @@
 
 @media screen and (max-width: 768px) {
   .SearchPhoto {
-    width: 98vw;
+    width: 100vw;
     margin-bottom: 2rem;
   }
   .SearchPhoto .Photo-Layer,

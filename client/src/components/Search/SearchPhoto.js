@@ -24,8 +24,8 @@ export class SearchPhoto extends Component {
             onClick={() => history.push(`/photos/${photo.id}`)}
             className="Photo-Layer"
           ></div>
-          <div className="small-display">
-            <div className="pb-3">
+          <div className="small-display px-2">
+            <div className="pb-2">
               <div className="d-flex align-items-center">
                 <Link to={`/user/${photo.user.username}`}>
                   <img
@@ -35,7 +35,7 @@ export class SearchPhoto extends Component {
                   />
                 </Link>
                 <Link to={`/user/${photo.user.username}`}>
-                  <p className="pl-3 m-0">{photo.user.name}</p>
+                  <p className="pl-2 m-0">{photo.user.name}</p>
                 </Link>
               </div>
             </div>
@@ -46,7 +46,7 @@ export class SearchPhoto extends Component {
           >
             <img src={photo.urls.small} alt={photo.alt_description} />
           </div>
-          <div className="small-display ">
+          <div className="small-display px-2">
             <div className="pt-2 d-flex justify-content-between">
               <div className="d-flex">
                 <p className="m-0">

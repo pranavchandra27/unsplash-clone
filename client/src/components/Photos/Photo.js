@@ -15,7 +15,7 @@ export class Photo extends Component {
           className="Photo-Layer"
         ></div>
         <div className="small-display px-2">
-          <div className="pb-3">
+          <div className="pb-2">
             <div className="d-flex align-items-center">
               <Link to={`/user/${photo.user.username}`}>
                 <img
@@ -25,7 +25,7 @@ export class Photo extends Component {
                 />
               </Link>
               <Link to={`/user/${photo.user.username}`}>
-                <p className="pl-3 m-0">{photo.user.name}</p>
+                <p className="pl-2 m-0">{photo.user.name}</p>
               </Link>
             </div>
           </div>
