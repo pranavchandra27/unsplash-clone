@@ -17,6 +17,7 @@ export class Photos extends Component {
         <HomeSearch history={history} />
         <div className="Photos">
           <InfiniteScroll
+            className={"InfiniteScroll"}
             dataLength={photos.length}
             hasMore={true}
             next={fetchPhotos}

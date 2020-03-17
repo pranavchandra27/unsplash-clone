@@ -84,6 +84,7 @@ export class CollectionPhotos extends Component {
           </p>
         </div>
         <InfiniteScroll
+          className={"InfiniteScroll"}
           dataLength={photos.length}
           hasMore={true}
           next={this.fetchCollectionPhotos}

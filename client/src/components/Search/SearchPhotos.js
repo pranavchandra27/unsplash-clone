@@ -18,6 +18,7 @@ export class SearchPhotos extends Component {
         </div>
         <div className="Search-Related"></div>
         <InfiniteScroll
+          className={"InfiniteScroll"}
           dataLength={photos.length}
           hasMore={true}
           next={fetchPhotos}

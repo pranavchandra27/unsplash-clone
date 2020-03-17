@@ -26,6 +26,7 @@ class Collections extends Component {
           </p>
         </div>
         <InfiniteScroll
+          className={"InfiniteScroll"}
           dataLength={collections.length}
           hasMore={true}
           next={fetchCollections}

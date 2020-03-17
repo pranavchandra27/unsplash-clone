@@ -25,6 +25,10 @@ button {
   font-size: 14px;
 }
 
+.InfiniteScroll {
+  overflow: hidden !important;
+}
+
 .small-display img {
   width: 40px;
 }

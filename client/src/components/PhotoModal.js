@@ -118,7 +118,7 @@ class PhotoModal extends Component {
                 />
               ) : (
                 <img
-                  style={{ height: "70vh", width: "auto", objectFit: "cover" }}
+                  style={{ height: "70vh" }}
                   src={photoData.urls.regular}
                   alt={photoData.alt_description}
                 />
