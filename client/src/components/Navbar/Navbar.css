@@ -9,12 +9,18 @@
   width: 60%;
 }
 
-.Navbar .More-Options {
+.Navbar .mobile-nav {
   display: none;
 }
 
-@media screen and (max-width: 991px) {
-  .Navbar .More-Options {
+@media screen and (max-width: 768px) {
+  .Nav-Search,
+  .Navbar .navbar-brand {
+    display: none;
+  }
+
+  .Navbar .mobile-nav {
+    width: 100%;
     display: block;
   }
 }

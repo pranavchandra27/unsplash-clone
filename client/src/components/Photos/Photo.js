@@ -14,7 +14,7 @@ export class Photo extends Component {
           }}
           className="Photo-Layer"
         ></div>
-        <div className="small-display">
+        <div className="small-display px-2">
           <div className="pb-3">
             <div className="d-flex align-items-center">
               <Link to={`/user/${photo.user.username}`}>
@@ -33,7 +33,7 @@ export class Photo extends Component {
         <div style={{ background: photo.color }}>
           <img src={photo.urls.small} alt={photo.alt_description} />
         </div>
-        <div className="small-display ">
+        <div className="small-display px-2">
           <div className="pt-2 d-flex justify-content-between">
             <div className="d-flex">
               <p className="m-0">

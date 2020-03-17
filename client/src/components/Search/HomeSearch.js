@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { PhotoSearchContext } from "../../context/PhotoSearchContext";
 import "./HomeSearch.css";
-import Axios from "axios";
+import axios from "axios";
 
 class HomeSearch extends Component {
   static contextType = PhotoSearchContext;
@@ -12,11 +12,12 @@ class HomeSearch extends Component {
   };
 
   async componentDidMount() {
-    await Axios.get(`photos/random?value=landscape`).then(res => {
+    await axios.get(`photos/random?value=landscape`).then(res => {
       this.setState({
         backImg: res.data[0].urls.full,
         color: res.data[0].color
       });
+      // console.log(res.data);
     });
   }
 
@@ -40,9 +41,9 @@ class HomeSearch extends Component {
           className="d-flex flex-column justify-content-center align-items-center HomeSearch"
         >
           <div className="HomeSearch-headings text-white">
-            <h1 className="display-4">Splash</h1>
+            <h1>Splash</h1>
             <p>Download free high-resolution photos</p>
-            <p>Photos from creators everywhere</p>
+            <p className="pb-3 pt-2">Photos from creators around the world</p>
           </div>
           <form className="HomeSearch-form" onSubmit={this.handleSubmit}>
             <div className="form-group">

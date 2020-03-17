@@ -37,7 +37,7 @@ export class Collection extends Component {
           >
             {collection.title}
           </h5>
-          <p className="Subtitle">
+          <p className="Subtitle text-nowrap text-truncate p-0">
             {collection.total_photos} photos - Curated by {collection.user.name}
           </p>
         </div>

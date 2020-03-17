@@ -26,16 +26,16 @@ button {
 }
 
 .small-display img {
-  width: 50px;
+  width: 40px;
 }
 
 .small-display p {
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
 }
 
 .small-display i {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .small-display {

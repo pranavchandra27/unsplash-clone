@@ -33,17 +33,24 @@
   font-family: sans-serif;
 }
 
-.Collections-Heading a {
-  color: #aaa;
-  text-decoration: underline;
-}
-
-.Collections-Heading a:hover {
-  color: #333;
-}
-
 @media screen and (max-width: 1280px) {
   .Collections-Heading {
-    margin-left: 2rem;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Collections-Heading {
+    margin-left: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .Collections-Heading .Title {
+    margin-top: 1rem;
+    font-size: 25px;
+  }
+
+  .Collections-Heading p {
+    font-size: 13px;
   }
 }

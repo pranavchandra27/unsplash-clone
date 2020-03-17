@@ -22,8 +22,7 @@ class Collections extends Component {
           <p>Beautiful, free pictures of the week.</p>
           <p>
             Explore the world through collections of beautiful HD pictures free
-            to use under the{" "}
-            <a href="www.unsplash.com/license">Unsplash License</a>.
+            to use.
           </p>
         </div>
         <InfiniteScroll

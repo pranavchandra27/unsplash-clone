@@ -125,7 +125,7 @@
 
 @media screen and (max-width: 768px) {
   .Photo {
-    width: 98vw;
+    width: 100vw;
     margin-bottom: 2rem;
   }
   .Photo .Photo-Layer,

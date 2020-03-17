@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import NavSearch from "../Search/NavSearch";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 export class Navbar extends Component {
   render() {
     const { history, match, location } = this.props;
-    const active = location.pathname === "/collections" ? "active" : "";
+    const activeCollection =
+      location.pathname === "/collections" ? "active" : "";
+    const activeHome = location.pathname === "/" ? "active" : "";
     return (
       <div className="Navbar">
         <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -18,10 +18,35 @@ export class Navbar extends Component {
           <div className="Nav-Search mr-auto">
             <NavSearch history={history} match={match} />
           </div>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="mobile-nav">
+            <ul className="nav nav-pills justify-content-around">
+              <li className="nav-item">
+                <Link className={`nav-link ${activeHome}`} to="/">
+                  <i className="fas fa-home"></i>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className={`nav-link ${activeCollection}`}
+                  to="/collections"
+                >
+                  <i className="fas fa-layer-group"></i>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/m/search">
+                  <i className="fas fa-search"></i>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item mr-2">
-                <Link className={`nav-link ${active}`} to="/collections">
+                <Link
+                  className={`nav-link ${activeCollection}`}
+                  to="/collections"
+                >
                   Collections
                 </Link>
               </li>
@@ -31,27 +56,6 @@ export class Navbar extends Component {
                 </Link>
               </li>
             </ul>
-          </div>
-          <div className="More-Options">
-            <DropdownButton
-              key="left"
-              id="dropdown-button-drop-left"
-              drop="left"
-              title="More"
-              variant="outline-secondary"
-            >
-              <Dropdown.Item eventKey="1">
-                <Link className="nav-link p-0 text-dark" to="/collections">
-                  Collections
-                </Link>
-              </Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item eventKey="4">
-                <Link className="nav-link p-0 text-dark" to="/login">
-                  Login
-                </Link>
-              </Dropdown.Item>
-            </DropdownButton>
           </div>
         </nav>
       </div>
