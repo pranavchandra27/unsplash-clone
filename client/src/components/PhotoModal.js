@@ -104,21 +104,17 @@ class PhotoModal extends Component {
                 cursor: !isImageBig ? "zoom-in" : "zoom-out"
               }}
               onClick={this.zoomImg}
-              className="text-center mt-4"
+              className="text-center Image-holder mt-4"
             >
               {isImageBig ? (
                 <img
-                  style={{
-                    height: "150vh",
-                    width: "100%",
-                    objectFit: "center"
-                  }}
+                  className="full-img"
                   src={photoData.urls.raw}
                   alt={photoData.alt_description}
                 />
               ) : (
                 <img
-                  style={{ height: "70vh" }}
+                  className="small-img"
                   src={photoData.urls.regular}
                   alt={photoData.alt_description}
                 />

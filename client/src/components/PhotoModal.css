@@ -22,6 +22,31 @@
   text-decoration: none;
 }
 
+.PhotoModal a:hover {
+  text-decoration: none;
+}
+
+.PhotoModal .Image-holder {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.PhotoModal .small-img {
+  width: auto;
+  max-width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.PhotoModal .full-img {
+  max-width: 100%;
+  height: 170vh;
+  object-position: center;
+  object-fit: cover;
+}
+
 .PhotoModal-Collection {
   justify-content: center;
   align-items: center;
@@ -112,9 +137,18 @@
 
 @media screen and (max-width: 768px) {
   .PhotoModal .modal-90w {
-    max-width: 95vw;
-    width: 95vw;
+    max-width: 100vw;
+    width: 100vw;
     padding: 0 !important;
+  }
+
+  .PhotoModal .Image-holder {
+    padding: 0;
+  }
+
+  .PhotoModal .small-img {
+    width: 100%;
+    height: auto;
   }
 
   .PhotoModal .PhotoModal-Download-Btn {
