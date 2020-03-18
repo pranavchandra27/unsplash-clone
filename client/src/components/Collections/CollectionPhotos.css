@@ -152,7 +152,7 @@
 @media screen and (max-width: 768px) {
   .Collection-Photo {
     width: 100vw;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .Collection-Photo .Photo-Layer,
   .Collection-Photo .Collection-Photo-Info {

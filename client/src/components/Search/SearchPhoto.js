@@ -44,7 +44,11 @@ export class SearchPhoto extends Component {
             className="SearchPhoto-Photo"
             style={{ background: photo.color }}
           >
-            <img src={photo.urls.small} alt={photo.alt_description} />
+            <img
+              onClick={() => history.push(`/photos/${photo.id}`)}
+              src={photo.urls.small}
+              alt={photo.alt_description}
+            />
           </div>
           <div className="small-display px-2">
             <div className="pt-2 d-flex justify-content-between">
