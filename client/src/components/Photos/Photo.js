@@ -30,13 +30,23 @@ export class Photo extends Component {
           </div>
         </div>
         <div style={{ background: photo.color }}>
-          <img
-            src={photo.urls.small}
-            onClick={() => {
-              history.push(`photos/${photo.id}`);
-            }}
-            alt={photo.alt_description}
-          />
+          {window.innerWidth >= 768 ? (
+            <img
+              src={photo.urls.small}
+              onClick={() => {
+                history.push(`photos/${photo.id}`);
+              }}
+              alt={photo.alt_description}
+            />
+          ) : (
+            <img
+              src={photo.urls.regular}
+              onClick={() => {
+                history.push(`photos/${photo.id}`);
+              }}
+              alt={photo.alt_description}
+            />
+          )}
         </div>
         <div className="small-display px-2">
           <div className="pt-2 d-flex justify-content-between">
