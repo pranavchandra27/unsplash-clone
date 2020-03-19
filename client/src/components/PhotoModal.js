@@ -61,7 +61,7 @@ class PhotoModal extends Component {
                     className="pl-2 py-0 text-dark Name"
                     to={`/user/${photoData.user.username}`}
                   >
-                    <p className="m-0 p-0">{photoData.user.name}</p>
+                    <p className="m-0 pt-1">{photoData.user.name}</p>
                     <p className="text-secondary m-0 p-0">
                       @{photoData.user.username}
                     </p>
