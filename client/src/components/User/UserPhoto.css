@@ -106,28 +106,30 @@
 
 @media screen and (max-width: 1100px) {
   .UserPhoto {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .UserPhoto {
     width: 400px;
   }
+}
 
+@media screen and (max-width: 860px) {
+  .UserPhoto {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .UserPhoto {
+    width: 100vw;
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+  .UserPhoto .Photo-Layer,
   .UserPhoto .UserPhoto-Info {
     display: none;
-  }
-}
-
-@media screen and (max-width: 872px) {
-  .UserPhoto {
-    width: 320px;
-  }
-}
-
-@media screen and (max-width: 712px) {
-  .UserPhoto {
-    width: 280px;
-  }
-}
-
-@media screen and (max-width: 636px) {
-  .UserPhoto {
-    width: 155px;
   }
 }

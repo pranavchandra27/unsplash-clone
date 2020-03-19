@@ -25,7 +25,7 @@ class Users extends Component {
     ) : (
       <div className="User">
         <div className="User-Data border-bottom">
-          <div className="User-Info d-flex justify-content-center mt-5">
+          <div className="User-Info d-flex flex-column flex-md-row justify-content-center mt-5">
             <div className="mr-5 profile">
               <img
                 className="rounded-circle"
@@ -33,14 +33,14 @@ class Users extends Component {
                 alt={user.name}
               />
             </div>
-            <div className="info">
+            <div className="info mt-2">
               <h1>{user.name}</h1>
-              <div className="d-flex text-secondary">
-                <p>
+              <div className="d-flex flex-column flex-md-row text-secondary">
+                <p className="m-0">
                   <i className="fas fa-map-marker-alt"></i>{" "}
                   {user.location ? user.location : "N/A"}
                 </p>
-                <p className="ml-5">
+                <p className="ml-md-5 ">
                   <i className="fab fa-instagram"></i> instagram.com/
                   {user.instagram_username}
                 </p>

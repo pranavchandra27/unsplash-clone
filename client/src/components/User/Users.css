@@ -14,3 +14,29 @@
 .User-Data {
   padding-bottom: 5rem;
 }
+
+@media screen and (max-width: 768px) {
+  .User-Info {
+    max-width: 100%;
+  }
+
+  .User-Info .profile {
+    width: 100px;
+  }
+
+  .User-Info .profile img {
+    width: 100px;
+  }
+
+  .User-Info .info h1 {
+    font-size: 22px;
+  }
+
+  .User-Info .info p {
+    font-size: 14px;
+  }
+
+  .User-Data {
+    padding-bottom: 2rem;
+  }
+}

@@ -6,16 +6,22 @@ class UserPhoto extends Component {
   render() {
     const { photo, history } = this.props;
     return (
-      <div className="UserPhoto" style={{ background: photo.color }}>
+      <div className="UserPhoto">
         <div
           onClick={() => {
             history.push(`/photos/${photo.id}`);
           }}
           className="Photo-Layer"
         ></div>
-        <a href={photo.links.download}>
-          <img src={photo.urls.small} alt={photo.alt_description} />
-        </a>
+        <div style={{ background: photo.color }}>
+          <img
+            src={photo.urls.small}
+            onClick={() => {
+              history.push(`photos/${photo.id}`);
+            }}
+            alt={photo.alt_description}
+          />
+        </div>
         <div className="UserPhoto-Info">
           <div className="Top-Icon">
             <p>

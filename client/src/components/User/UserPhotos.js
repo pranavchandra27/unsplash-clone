@@ -24,14 +24,10 @@ class UserPhotos extends Component {
     this.setState({ page: page + 1 });
   };
   render() {
-    const { history, name } = this.props;
+    const { history } = this.props;
     const { photos } = this.state;
     return (
       <div className="User-Photos">
-        <h2>
-          <i className="fas fa-image mr-1"></i>
-          {name}'s Photos
-        </h2>
         <InfiniteScroll
           dataLength={photos.length}
           hasMore={true}
