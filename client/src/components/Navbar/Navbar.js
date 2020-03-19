@@ -12,9 +12,15 @@ export class Navbar extends Component {
     return (
       <div className="Navbar">
         {location.pathname === "/m/search" ? (
-          <div className="py-2">
-            <NavSearch />
-            <p onClick={() => history.goBack()}>Cancel</p>
+          <div className="py-2 d-flex">
+            <NavSearch history={history} match={match} />
+            <button
+              className="btn btn-light btn-sm pl-2"
+              aria-label="Close"
+              onClick={() => history.goBack()}
+            >
+              Cancel
+            </button>
           </div>
         ) : (
           <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">

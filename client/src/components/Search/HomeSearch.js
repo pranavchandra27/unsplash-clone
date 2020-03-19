@@ -14,34 +14,29 @@ class HomeSearch extends Component {
 
   componentDidMount() {
     this.fetchRndmImg();
-    setInterval(() => {
-      this.fetchRndmImg();
-    }, 1000 * 60 * 60);
-    this.getData();
   }
 
   fetchRndmImg = async () => {
-    const { url } = this.state;
     await axios.get(`photos/random?value=landscape`).then(res => {
       this.setState({
         url: res.data[0].urls.full,
-        color: res.data[0].color
+        color: res.data[0].color,
+        backImg: res.data[0].urls.regular
       });
-      localStorage.setItem("url", url);
     });
   };
 
-  getData = () => {
-    const url = localStorage.getItem("url");
-    if (url === "") {
-      this.setState({ backImg: url });
-    } else {
-      this.setState({
-        backImg:
-          "https://images.unsplash.com/photo-1581656506224-6eae257ceb04?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEwNDIwNH0"
-      });
-    }
-  };
+  // getData = () => {
+  //   const url = localStorage.getItem("url");
+  //   if (url === "") {
+  //     this.setState({ backImg: url });
+  //   } else {
+  //     this.setState({
+  //       backImg:
+  //         "https://images.unsplash.com/photo-1581656506224-6eae257ceb04?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEwNDIwNH0"
+  //     });
+  //   }
+  // };
 
   handleSubmit = async e => {
     e.preventDefault();
