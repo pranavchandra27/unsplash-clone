@@ -8,18 +8,33 @@ class HomeSearch extends Component {
   state = {
     value: "",
     backImg: "",
-    color: "#aaa"
+    color: "#aaa",
+    url: ""
   };
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.getData();
+    setInterval(() => {
+      this.fetchRndmImg();
+    }, 1000 * 60 * 60);
+  }
+
+  fetchRndmImg = async () => {
+    const { url } = this.state;
     await axios.get(`photos/random?value=landscape`).then(res => {
       this.setState({
-        backImg: res.data[0].urls.full,
+        url: res.data[0].urls.full,
         color: res.data[0].color
       });
-      // console.log(res.data);
+      localStorage.setItem("url", url);
     });
-  }
+  };
+
+  getData = () => {
+    const url = localStorage.getItem("url");
+    this.setState({ backImg: url });
+    console.log(url);
+  };
 
   handleSubmit = async e => {
     e.preventDefault();
