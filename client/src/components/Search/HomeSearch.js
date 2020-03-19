@@ -13,14 +13,11 @@ class HomeSearch extends Component {
   };
 
   componentDidMount() {
-    this.getData();
+    this.fetchRndmImg();
     setInterval(() => {
       this.fetchRndmImg();
     }, 1000 * 60 * 60);
-  }
-
-  componentWillMount() {
-    this.fetchRndmImg();
+    this.getData();
   }
 
   fetchRndmImg = async () => {
@@ -36,7 +33,14 @@ class HomeSearch extends Component {
 
   getData = () => {
     const url = localStorage.getItem("url");
-    this.setState({ backImg: url });
+    if (url === "") {
+      this.setState({ backImg: url });
+    } else {
+      this.setState({
+        backImg:
+          "https://images.unsplash.com/photo-1581656506224-6eae257ceb04?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEwNDIwNH0"
+      });
+    }
   };
 
   handleSubmit = async e => {

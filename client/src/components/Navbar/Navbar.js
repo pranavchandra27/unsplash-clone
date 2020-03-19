@@ -14,7 +14,7 @@ export class Navbar extends Component {
         {location.pathname === "/m/search" ? (
           <div className="py-2">
             <NavSearch />
-            <Link onClick={() => history.goBack()}>Cancel</Link>
+            <p onClick={() => history.goBack()}>Cancel</p>
           </div>
         ) : (
           <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">

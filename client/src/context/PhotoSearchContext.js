@@ -11,12 +11,13 @@ export class PhotoSearchProvider extends Component {
   };
 
   async componentDidMount() {
+    localStorage.removeItem("query");
     await this.getQuery();
     this.fetchPhotos();
   }
 
   setQuery = value => {
-    localStorage.clear();
+    localStorage.removeItem("query");
     localStorage.setItem("query", value);
   };
 
