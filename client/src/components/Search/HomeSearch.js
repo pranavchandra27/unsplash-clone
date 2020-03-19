@@ -19,6 +19,10 @@ class HomeSearch extends Component {
     }, 1000 * 60 * 60);
   }
 
+  componentWillMount() {
+    this.fetchRndmImg();
+  }
+
   fetchRndmImg = async () => {
     const { url } = this.state;
     await axios.get(`photos/random?value=landscape`).then(res => {
@@ -33,7 +37,6 @@ class HomeSearch extends Component {
   getData = () => {
     const url = localStorage.getItem("url");
     this.setState({ backImg: url });
-    console.log(url);
   };
 
   handleSubmit = async e => {
