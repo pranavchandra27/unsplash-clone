@@ -5,7 +5,6 @@ import "./Photo.css";
 export class Photo extends Component {
   render() {
     const { photo, history } = this.props;
-    console.log(window.innerWidth);
     return (
       <div className="Photo">
         <div

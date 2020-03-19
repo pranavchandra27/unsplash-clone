@@ -40,7 +40,7 @@ class Users extends Component {
                   <i className="fas fa-map-marker-alt"></i>{" "}
                   {user.location ? user.location : "N/A"}
                 </p>
-                <p className="ml-md-5 ">
+                <p className="ml-md-5 mt-md-0 mt-1">
                   <i className="fab fa-instagram"></i> instagram.com/
                   {user.instagram_username}
                 </p>
