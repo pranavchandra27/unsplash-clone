@@ -8,17 +8,13 @@ class UserPhoto extends Component {
     return (
       <div className="UserPhoto">
         <div
-          onClick={() => {
-            history.push(`/photos/${photo.id}`);
-          }}
+          onClick={() => history.push(`/photos/${photo.id}`)}
           className="Photo-Layer"
         ></div>
         <div style={{ background: photo.color }}>
           <img
             src={photo.urls.small}
-            onClick={() => {
-              history.push(`photos/${photo.id}`);
-            }}
+            onClick={() => history.push(`photos/${photo.id}`)}
             alt={photo.alt_description}
           />
         </div>
