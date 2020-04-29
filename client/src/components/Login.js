@@ -6,10 +6,10 @@ import "./Login.css";
 export class Login extends Component {
   render() {
     return (
-      <div className='container'>
+      <div className='px-4'>
         <div className='row'>
-          <div className='col-sm-1 col-lg-2' />
-          <div className='col-12 col-sm-10 col-lg-8 mt-5'>
+          <div className='col-sm-1 col-lg-3' />
+          <div className='col-sm-10 col-lg-6 mt-5'>
             <div className='text-center'>
               <h1 className='h4 bold'>Login</h1>
               <p>Welcome back</p>
@@ -40,7 +40,7 @@ export class Login extends Component {
               </p>
             </div>
           </div>
-          <div className='col-sm-2 col-lg-2' />
+          <div className='col-sm-1 col-lg-3' />
         </div>
       </div>
     );
