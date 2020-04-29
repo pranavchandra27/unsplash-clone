@@ -6,7 +6,7 @@ import "./Login.css";
 export class Login extends Component {
   render() {
     return (
-      <div className='px-4'>
+      <div className='px-3'>
         <div className='row'>
           <div className='col-sm-1 col-lg-3' />
           <div className='col-sm-10 col-lg-6 mt-5'>
