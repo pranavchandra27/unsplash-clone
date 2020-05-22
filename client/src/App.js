@@ -2,7 +2,7 @@ import React from "react";
 import Photos from "./components/Photos/Photos";
 import SearchPhotos from "./components/Search/SearchPhotos";
 import AppNavbar from "./components/Navbar/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { PhotoProvider } from "./context/PhotoContext";
 import { PhotoSearchProvider } from "./context/PhotoSearchContext";
 import { CollectionsProvider } from "./context/CollectionsContext";

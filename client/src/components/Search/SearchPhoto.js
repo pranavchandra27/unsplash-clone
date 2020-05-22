@@ -99,7 +99,7 @@ export class SearchPhoto extends Component {
             </div>
           </div>
         </div>
-        <div className='p-2'>
+        <div className='bottom-tags'>
           <p className='text-nowrap text-dark text-truncate'>
             {photo.alt_description}
           </p>
